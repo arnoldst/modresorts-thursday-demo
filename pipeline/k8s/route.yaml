@@ -1,0 +1,13 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  labels:
+    app: modresorts10war
+  name: modresorts10war
+spec:
+  port:
+    targetPort: http
+  to:
+    kind: Service
+    name: modresorts10war
+    weight: 100
